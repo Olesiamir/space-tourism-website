@@ -7,16 +7,16 @@ export const navItems = [
   {
     id: '01',
     title: 'Destination',
-    to: '/',
+    to: '/destinations',
   }, 
   {
     id: '02',
     title: 'Crew',
-    to: '/',
+    to: '/crew',
   }, 
   {
     id: '03',
     title: 'Technology',
-    to: '/',
+    to: '/technology',
   }, 
 ]
