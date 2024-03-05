@@ -6,7 +6,7 @@ import Home from './pages/Home'
 
 //layouts
 import RootLayout from './layouts/RootLayout'
-import DestinationLayout from './layouts/DestinationLayout'
+import DestinationLayout, { destinationLoader } from './layouts/DestinationLayout'
 import CrewLayout from './layouts/CrewLayout'
 import TechnologyLayout from './layouts/TechnologyLayout'
 
@@ -14,9 +14,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Home />}/>
-      <Route path='destinations' element={<DestinationLayout/>}>
+      <Route path='destinations' element={<DestinationLayout/>} loader={destinationLoader}>
         
       </Route>
+        
       <Route path='crew' element={<CrewLayout/>}>
 
       </Route>
