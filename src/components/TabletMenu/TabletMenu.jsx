@@ -1,31 +1,10 @@
 import TabletMenuItem from "./components/TabletMenuItem"
+import { navItems } from "../navItems"
 
-const navItems = [
-  {
-    id: '00',
-    title: 'Home',
-    to: '/',
-  }, 
-  {
-    id: '01',
-    title: 'Destination',
-    to: '/',
-  }, 
-  {
-    id: '02',
-    title: 'Crew',
-    to: '/',
-  }, 
-  {
-    id: '03',
-    title: 'Technology',
-    to: '/',
-  }, 
-]
 
 const TabletMenu = () => {
   return (
-    <div className="w-[450px] h-24 bg-white bg-opacity-5 hidden md:inline-block">
+    <div className="w-[450px] h-24 bg-[#151923] hidden md:inline-block lg:hidden">
       <nav className="h-full">
         <ul className="flex items-center justify-around h-full">
           {navItems.map(item => (

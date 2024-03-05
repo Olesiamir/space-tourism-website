@@ -8,12 +8,14 @@ export default {
     screens: {
       sm: '375px',
       md: '768px',
-      lg: '1440px',
+      lg: '1024px',
+      xl: '1440px'
     },
     colors: {
       'dark-blue': '#0B0D17',
       'violet': '#D0D6F9',
       'white': '#FFFFFF',
+      transparent: 'transparent',
     },
     fontFamily: {
       'bellefair': ['Bellefair', 'sans-serif'],
