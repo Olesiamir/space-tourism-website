@@ -5,6 +5,7 @@ const Carousel = ({
   SlideIndicator,
   TopContainer,
   BottomContainer,
+  imageContainerClassName = "top-container",
   slideIndicatorClassName = ""
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -19,7 +20,7 @@ const Carousel = ({
 
   return (
     <div className="carousel flex flex-col items-center mt-8">
-      <div className="top-container"><TopContainer item={item} /></div>
+      <div className={imageContainerClassName}><TopContainer item={item} /></div>
       <div className={slideIndicatorClassName}>
         {items.map((item, index) => <SlideIndicator key={item.name} item={item} onClick={handleClick} isActive={index === currentIndex}/>)}
       </div>
