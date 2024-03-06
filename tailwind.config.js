@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 export default {
   content: [
     "./index.html",
@@ -14,8 +16,14 @@ export default {
     colors: {
       'dark-blue': '#0B0D17',
       'violet': '#D0D6F9',
-      'white': '#FFFFFF',
       transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray,
+      emerald: colors.emerald,
+      indigo: colors.indigo,
+      yellow: colors.yellow,
     },
     fontFamily: {
       'bellefair': ['Bellefair', 'sans-serif'],

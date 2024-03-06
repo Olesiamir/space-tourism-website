@@ -1,9 +1,14 @@
 import { useState } from "react"
 
-const Carousel = ({items, SlideIndicator, TopContainer, BottomContainer}) => {
+const Carousel = ({
+  items,
+  SlideIndicator,
+  TopContainer,
+  BottomContainer,
+  slideIndicatorClassName = ""
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const item = items[currentIndex]
-
 
   const handleClick = (item) => {
     const nextIndex = items.findIndex((listItem) => {
@@ -13,9 +18,9 @@ const Carousel = ({items, SlideIndicator, TopContainer, BottomContainer}) => {
   }
 
   return (
-    <div className="carousel">
+    <div className="carousel flex flex-col items-center mt-8">
       <div className="top-container"><TopContainer item={item} /></div>
-      <div>
+      <div className={slideIndicatorClassName}>
         {items.map((item, index) => <SlideIndicator key={item.name} item={item} onClick={handleClick} isActive={index === currentIndex}/>)}
       </div>
       <div className="bottom-container"><BottomContainer item={item} /></div>
