@@ -2,7 +2,7 @@ import { Outlet, useLoaderData } from "react-router-dom"
 import DestinationsCarousel from "./DestinationsCarousel"
 
 
-const DestinationLayout = () => {
+const Destinations = () => {
   const planetDetails = useLoaderData()
   console.log(planetDetails)
   return (
@@ -26,4 +26,4 @@ export const destinationLoader = async () => {
 }
 
 
-export default DestinationLayout
+export default Destinations

@@ -6,20 +6,20 @@ import Home from './pages/Home'
 
 //layouts
 import RootLayout from './layouts/RootLayout'
-import DestinationLayout, { destinationLoader } from './pages/destinations/Destinations'
-import CrewLayout from './layouts/CrewLayout'
+import Destinations, { destinationLoader } from './pages/destinations/Destinations'
 import TechnologyLayout from './layouts/TechnologyLayout'
+import Crew, { crewLoader } from './pages/crew/Crew'
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Home />}/>
-      <Route path='destinations' element={<DestinationLayout/>} loader={destinationLoader}>
+      <Route path='destinations' element={<Destinations/>} loader={destinationLoader}>
 
       </Route>
         
-      <Route path='crew' element={<CrewLayout/>}>
+      <Route path='crew' element={<Crew/>} loader={crewLoader}>
 
       </Route>
       <Route path='technology' element={<TechnologyLayout />}>
