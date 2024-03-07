@@ -3,7 +3,7 @@ import { navItems } from '../navItems'
 
 const MobileMenu = ({ isOpen, onClose }) => {
   return (
-    <div className={`${isOpen ? 'opacity-100 right-0' : 'opacity-0 right-[-254px]'} transition-all duration-500 py-6 absolute w-[254px] backdrop-blur-2xl  h-full text-sm uppercase md:hidden`}>
+    <div className={`${isOpen ? 'opacity-100 right-0' : 'opacity-0 right-[-254px]'} transition-all duration-500 py-6 absolute w-[254px] backdrop-blur-2xl  h-[710px] text-sm uppercase md:hidden`}>
       
       <nav>
         <ul className='mt-24 ml-8'>

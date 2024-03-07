@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
+const screens = require('./src/config')
 
 export default {
   content: [
@@ -7,12 +8,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      sm: '375px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1440px'
-    },
+    screens,
     colors: {
       'dark-blue': '#0B0D17',
       'violet': '#D0D6F9',
@@ -44,6 +40,7 @@ export default {
         fontWeight: '100'
       }],
       base: ['18px', '32px'],
+      md: '24px',
       lg: '28px',
       xl: '32px',
       '2xl': '56px',

@@ -9,6 +9,7 @@ import RootLayout from './layouts/RootLayout'
 import Destinations, { destinationLoader } from './pages/destinations/Destinations'
 import TechnologyLayout from './layouts/TechnologyLayout'
 import Crew, { crewLoader } from './pages/crew/Crew'
+import Technology, { technologyLoader } from './pages/technology/Technology'
 
 
 const router = createBrowserRouter(
@@ -22,7 +23,7 @@ const router = createBrowserRouter(
       <Route path='crew' element={<Crew/>} loader={crewLoader}>
 
       </Route>
-      <Route path='technology' element={<TechnologyLayout />}>
+      <Route path='technology' element={<Technology />} loader={technologyLoader}>
 
       </Route>
     </Route>

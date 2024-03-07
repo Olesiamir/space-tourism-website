@@ -24,7 +24,7 @@ const Carousel = ({
     <div className={mainCarouselClassName}>
       <div className={imageContainerClassName}><TopContainer item={item} /></div>
       <div className={slideIndicatorClassName}>
-        {items.map((item, index) => <SlideIndicator key={item.name} item={item} onClick={handleClick} isActive={index === currentIndex}/>)}
+        {items.map((item, index) => <SlideIndicator key={item.name} index={index} item={item} onClick={handleClick} isActive={index === currentIndex}/>)}
       </div>
       <div className={bottomContainerClassName}><BottomContainer item={item} /></div>
     </div>
