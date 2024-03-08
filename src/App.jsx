@@ -20,7 +20,10 @@ const router = createBrowserRouter(
       <Route path='crew' element={<Crew/>} loader={crewLoader} />
       <Route path='technology' element={<Technology />} loader={technologyLoader} />
     </Route>
-  )
+  ),
+  {
+    basename: "/space-tourism-website/",
+  }
 )
 
 function App() {
