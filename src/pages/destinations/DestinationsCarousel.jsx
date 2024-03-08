@@ -1,12 +1,16 @@
+import { useMediaQuery } from "react-responsive"
 import Carousel from "../../components/Carousel"
 
 const SlideIndicator = ({item, onClick, isActive}) => {
-  return <div className={`${isActive ? 'border-b-white text-white' : ''}  box-border border-b-2 border-transparent inline-block  text-violet uppercase font-barlow-condensed text-xs md:text-sm hover:text-white h-full`} onClick={() => onClick(item) }>{item.name}</div>
+  return <div className={`${isActive ? 'border-b-white text-white' : ''}  box-border border-b-2 border-transparent inline-block  text-violet uppercase font-barlow-condensed text-xs md:text-sm hover:text-white hover:border-b-2 hover:border-b-[#979797] h-full cursor-pointer`} onClick={() => onClick(item) }>{item.name}</div>
 }
 const DestinationImage = ({ item }) => {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
   return (
     <div className="img-container flex justify-center w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[445px] lg:h-[445px]">
-      <img src={item.images.webp} alt="planet"/>
+      {isDesktop ? <img src={item.images.png} alt="planet"/> : <img src={item.images.webp} alt="planet"/>}
     </div>
   )
 }

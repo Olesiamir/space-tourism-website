@@ -1,14 +1,18 @@
+import { useMediaQuery } from "react-responsive"
 import Carousel from "../../components/Carousel"
 
 const CrewImage = ({ item }) => {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
   return (
-    <div className="img-container flex justify-center w-[327px] h-[223px] md:w-fit md:h-[572px] lg:w-fit lg:h-[712px] border-b-[#383B4B] border-b-2">
-      <img src={item.images.png} alt="crew"/>
+    <div className="img-container flex justify-center w-[327px] h-[223px] md:w-fit md:h-[572px] lg:w-fit lg:h-[712px] lg:min-w-[678px] border-b-[#383B4B] border-b-2 lg:border-none">
+      {isDesktop ? <img src={item.images.png} alt="crew"/> : <img src={item.images.webp} alt="crew"/>}
     </div>
   )
 }
 const SlideIndicator = ({item, onClick, isActive}) => {
-  return <div className={`${isActive ? ' bg-white' : 'bg-[#979797]'} h-2.5 w-2.5 rounded-full box-border inline-block hover:bg-white `} onClick={() => onClick(item)}></div>
+  return <div className={`${isActive ? ' bg-white' : 'bg-[#979797]'} h-2.5 w-2.5 rounded-full box-border inline-block hover:bg-white cursor-pointer `} onClick={() => onClick(item)}></div>
 }
 
 const InfoContainer = ({ item }) => {

@@ -38,7 +38,7 @@ const TechnologyCarousel = ({items}) => {
           SlideIndicator={SlideIndicator}
           imageContainerClassName="md:mt-7 lg:justify-self-end lg:col-start-24 lg:row-start-1 lg:row-end-7 lg:mt-0"
           slideIndicatorClassName="flex flex-row lg:flex-col items-center w-[152px] md:w-[210px] lg:w-[145px] justify-between h-fit-content mt-8 md:mt-0 lg:self-center lg:col-start-3 lg:col-end-7 lg:row-start-2 lg:row-end-6 lg:m-0 lg:gap-8"
-          mainCarouselClassName="carousel flex flex-col items-center mt-8 lg:grid lg:grid-cols-24 lg:items-center lg:mt-[60px] lg:grid-rows-6 lg:mt-32"
+          mainCarouselClassName="carousel flex flex-col items-center mt-8 lg:grid lg:grid-cols-24 lg:items-center lg:mt-[60px] lg:grid-rows-6 lg:mt-32 lg:h-5/6"
           bottomContainerClassName="bottom-container mt-8 md:mt-11 lg:col-start-6 lg:col-end-15 lg:row-start-2 lg:row-end-6 lg:m-0"
           TopContainer={TechnologyImage}
           BottomContainer={InfoContainer}
