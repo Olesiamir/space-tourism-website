@@ -1,5 +1,6 @@
 import { Outlet, useLoaderData } from "react-router-dom"
 import DestinationsCarousel from "./DestinationsCarousel"
+import data from '../../data/data.json'
 
 
 const Destinations = () => {
@@ -16,14 +17,7 @@ const Destinations = () => {
   )
 }
 
-export const destinationLoader = async () => {
-  const res = await fetch('http://localhost:3000/destinations')
-  if(!res.ok) {
-    throw new Error('could not fetch the data')
-  }
-  console.log(res)
-  return res.json()
-}
+export const destinationLoader = () => data.destinations
 
 
 export default Destinations

@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom"
 import TechnologyCarousel from "./TechnologyCarousel"
+import data from '../../data/data.json'
 
 const Technology = () => {
   const technologyDetails = useLoaderData()
@@ -15,11 +16,5 @@ const Technology = () => {
   )
 }
 
-export const technologyLoader = async() => {
-  const res = await fetch('http://localhost:3000/technology')
-  if(!res.ok) {
-    throw Error('could not fetch data')
-  }
-  return res.json()
-}
+export const technologyLoader = () => data.technology
 export default Technology

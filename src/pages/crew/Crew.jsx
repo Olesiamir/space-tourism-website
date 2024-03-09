@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom"
+import data from '../../data/data.json'
 import CrewCarousel from "./CrewCarousel"
 
 const Crew = () => {
@@ -15,11 +16,5 @@ const Crew = () => {
   )
 }
 
-export const crewLoader = async()  => {
-  const res = await fetch('http://localhost:3000/crew')
-  if(!res.ok) {
-    throw Error('could not fetch data')
-  }
-  return res.json()
-}
+export const crewLoader = async () => data.crew
 export default Crew
